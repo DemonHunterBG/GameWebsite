@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameWebsite.Data.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7ca8089da2db51355dc79f23165422c53b389f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5c9504254d0953fe8fbeeccfed4798997fd9004")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameWebsite.Data.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameWebsite.Data.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

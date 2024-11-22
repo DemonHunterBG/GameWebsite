@@ -5,21 +5,21 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameWebsite.Web", "GameWebsite\GameWebsite.Web.csproj", "{0A03A43C-E865-42ED-B016-2B6A3DECCC03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameWebsite.Common", "GameWebsite.Common\GameWebsite.Common.csproj", "{07A6E1C3-FD6B-451D-8A3D-813DCB5DE172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameWebsite.Common", "GameWebsite.Common\GameWebsite.Common.csproj", "{07A6E1C3-FD6B-451D-8A3D-813DCB5DE172}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameWebsite.Data", "GameWebsite.Data\GameWebsite.Data.csproj", "{AC76F0B0-B177-4A1F-837B-227D7512DDD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameWebsite.Data", "GameWebsite.Data\GameWebsite.Data.csproj", "{AC76F0B0-B177-4A1F-837B-227D7512DDD3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{442281FD-A88C-475B-811D-D1144F1D728A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameWebsite.Data.Models", "GameWebsite.Data.Models\GameWebsite.Data.Models.csproj", "{DA558CAC-5EA0-4657-8034-383310A01CA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameWebsite.Data.Models", "GameWebsite.Data.Models\GameWebsite.Data.Models.csproj", "{DA558CAC-5EA0-4657-8034-383310A01CA1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B8328C92-CC6E-423E-B22B-3431E13BB312}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E0BCD5D4-2F92-4113-A398-810FF836CFD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameWebsite.Web.Infrastructure", "GameWebsite.Infrastrucutre\GameWebsite.Web.Infrastructure.csproj", "{B583EA75-4626-4233-BD8D-3014AB8F9FE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameWebsite.Web.Infrastructure", "GameWebsite.Infrastrucutre\GameWebsite.Web.Infrastructure.csproj", "{B583EA75-4626-4233-BD8D-3014AB8F9FE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameWebsite.Web.ViewModels", "GameWebsite.ViewModels\GameWebsite.Web.ViewModels.csproj", "{0514B31A-3B18-47B3-A7E4-DD5FFB9FDD96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameWebsite.Web.ViewModels", "GameWebsite.ViewModels\GameWebsite.Web.ViewModels.csproj", "{0514B31A-3B18-47B3-A7E4-DD5FFB9FDD96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
