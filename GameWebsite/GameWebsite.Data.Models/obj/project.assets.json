@@ -316,6 +316,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "GameWebsite.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/GameWebsite.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameWebsite.Common.dll": {}
+        }
       }
     }
   },
@@ -807,10 +817,16 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "GameWebsite.Common/1.0.0": {
+      "type": "project",
+      "path": "../GameWebsite.Common/GameWebsite.Common.csproj",
+      "msbuildProject": "../GameWebsite.Common/GameWebsite.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "GameWebsite.Common >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.11",
       "Microsoft.EntityFrameworkCore >= 8.0.11"
     ]
@@ -842,7 +858,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Common\\GameWebsite.Common.csproj": {
+              "projectPath": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Common\\GameWebsite.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

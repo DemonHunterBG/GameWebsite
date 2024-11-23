@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qg9pXd7nQcDl5kFJliu8fscswwIbLSNHoDNg94z8Kbc=",
+  "Hash": "eiitM6tAj1DSp1hrguhYUduyPKTd0NQ6R6o15ktIbB0=",
   "Source": "GameWebsite.Web",
   "BasePath": "_content/GameWebsite.Web",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\no-image.jpg",
+      "SourceId": "GameWebsite.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\",
+      "BasePath": "_content/GameWebsite.Web",
+      "RelativePath": "images/no-image.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\no-image.jpg"
     },
     {
       "Identity": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\js\\site.js",

@@ -2206,6 +2206,7 @@
       },
       "GameWebsite.Data.Models/1.0.0": {
         "dependencies": {
+          "GameWebsite.Common": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore": "8.0.11"
         },

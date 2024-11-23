@@ -11,3 +11,6 @@ D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWeb
 D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite.Data.Models\obj\Debug\net8.0\refint\GameWebsite.Data.Models.dll
 D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite.Data.Models\obj\Debug\net8.0\GameWebsite.Data.Models.pdb
 D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite.Data.Models\obj\Debug\net8.0\ref\GameWebsite.Data.Models.dll
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite.Data.Models\bin\Debug\net8.0\GameWebsite.Common.dll
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite.Data.Models\bin\Debug\net8.0\GameWebsite.Common.pdb
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite.Data.Models\obj\Debug\net8.0\GameWebs.CF963396.Up2Date

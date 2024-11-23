@@ -89,7 +89,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Common\\GameWebsite.Common.csproj": {
+                "projectPath": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Common\\GameWebsite.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
