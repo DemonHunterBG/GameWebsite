@@ -21,6 +21,9 @@ namespace GameWebsite.Data
         public DbSet<Game> Games { get; set; }
         public DbSet<GameComment> GameComments { get; set; }
         public DbSet<ApplicationUserGame> ApplicationUsersGames { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<PostComment> PostComments { get; set; }
+        public DbSet<Artwork> Artworks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -23,5 +23,17 @@ namespace GameWebsite.Common
         {
             public const string CommentTextRequired = "Comment message is required.";
         }
+
+        public static class Post
+        {
+            public const string PostTitleRequired = "Post title is required.";
+            public const string PostTextRequired = "Post message is required.";
+        }
+
+        public static class Artwork
+        {
+            public const string ArtworkTitleRequired = "Title is required.";
+            public const string ArtworkURLRequired = "Artwork URL is required.";
+        }
     }
 }

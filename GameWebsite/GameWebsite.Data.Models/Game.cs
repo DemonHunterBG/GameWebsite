@@ -20,11 +20,11 @@ namespace GameWebsite.Data.Models
         public string Name { get; set; } = null!;
 
         [Required]
-        [MinLength(URLMinLength)]
-        [MaxLength(URLMaxLength)]
+        [MinLength(GameURLMinLength)]
+        [MaxLength(GameURLMaxLength)]
         public string GameURL { get; set; } = null!;
 
-        [MaxLength(URLMaxLength)]
+        [MaxLength(GameURLMaxLength)]
         public string? ImageURL { get; set; } = NoImageURL;
 
         [MaxLength(GameDescriptionMaxLength)]

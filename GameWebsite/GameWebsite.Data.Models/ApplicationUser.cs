@@ -13,5 +13,8 @@ namespace GameWebsite.Data.Models
 
         public virtual IList<GameComment> GameComments { get; set; } = new List<GameComment>();
 
+        public virtual IList<Post> Posts { get; set; } = new List<Post>();
+
+        public virtual IList<PostComment> PostComments { get; set; } = new List<PostComment>();
     }
 }
