@@ -126,6 +126,50 @@ namespace GameWebsite.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Artworks");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AddedOn = new DateTime(2024, 11, 29, 0, 0, 0, 0, DateTimeKind.Local),
+                            ArtworkURL = "/images/artworks/Forest.png",
+                            Title = "Forest"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AddedOn = new DateTime(2024, 11, 29, 0, 0, 0, 0, DateTimeKind.Local),
+                            ArtworkURL = "/images/artworks/Lizard Monster.png",
+                            Title = "Lizard Monster"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AddedOn = new DateTime(2024, 11, 29, 0, 0, 0, 0, DateTimeKind.Local),
+                            ArtworkURL = "/images/artworks/Snel.png",
+                            Title = "Snel"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AddedOn = new DateTime(2024, 11, 29, 0, 0, 0, 0, DateTimeKind.Local),
+                            ArtworkURL = "/images/artworks/Wolf.png",
+                            Title = "Wolf"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AddedOn = new DateTime(2024, 11, 29, 0, 0, 0, 0, DateTimeKind.Local),
+                            ArtworkURL = "/images/artworks/Zoom Rocket.png",
+                            Title = "Zoom Rocket"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AddedOn = new DateTime(2024, 11, 29, 0, 0, 0, 0, DateTimeKind.Local),
+                            ArtworkURL = "/images/artworks/Christmas Tree.png",
+                            Title = "Christmas Tree"
+                        });
                 });
 
             modelBuilder.Entity("GameWebsite.Data.Models.Game", b =>

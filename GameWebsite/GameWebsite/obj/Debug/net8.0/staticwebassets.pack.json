@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\artworks\\Christmas Tree.png",
+      "PackagePath": "staticwebassets\\images\\artworks\\Christmas Tree.png"
+    },
+    {
+      "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\artworks\\Forest.png",
+      "PackagePath": "staticwebassets\\images\\artworks\\Forest.png"
+    },
+    {
+      "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\artworks\\Lizard Monster.png",
+      "PackagePath": "staticwebassets\\images\\artworks\\Lizard Monster.png"
+    },
+    {
+      "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\artworks\\Snel.png",
+      "PackagePath": "staticwebassets\\images\\artworks\\Snel.png"
+    },
+    {
+      "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\artworks\\Wolf.png",
+      "PackagePath": "staticwebassets\\images\\artworks\\Wolf.png"
+    },
+    {
+      "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\artworks\\Zoom Rocket.png",
+      "PackagePath": "staticwebassets\\images\\artworks\\Zoom Rocket.png"
+    },
+    {
       "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\no-image.jpg",
       "PackagePath": "staticwebassets\\images\\no-image.jpg"
     },

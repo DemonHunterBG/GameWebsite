@@ -1,0 +1,48 @@
+﻿@using GameWebsite.Data.Models
+@model List<Artwork>
+
+@{
+    ViewData["Title"] = "Artworks";
+}
+
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+  text-align: center;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+div.title {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+
+<div class="row" style="text-align: center">
+    <h1>Artworks: @Model.Count()</h1>
+</div>
+<div class="row" style="text-align: center">
+    @foreach(var artwork in Model)
+    {
+       <div class="col-md-3 mb-4">
+            <div class="gallery" style="width: 100%;">
+                <a target="_blank" href=@artwork.ArtworkURL>
+                    <img src="@artwork.ArtworkURL" alt="@artwork.Title" class="card-img-top">
+                    <div class="title">@artwork.Title</div>
+                </a>
+            </div>
+        </div>
+    }
+</div>

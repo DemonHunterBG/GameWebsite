@@ -1,5 +1,7 @@
 ﻿using GameWebsite.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace GameWebsite.Web.Controllers
 {
@@ -12,9 +14,14 @@ namespace GameWebsite.Web.Controllers
             this.context = context;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var artworks = await context.Artworks
+                .AsNoTracking()
+                .ToListAsync();
+
+            return View(artworks);
         }
     }
 }

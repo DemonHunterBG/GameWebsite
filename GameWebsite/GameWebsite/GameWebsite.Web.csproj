@@ -32,8 +32,4 @@
     <ProjectReference Include="..\GameWebsite.ViewModels\GameWebsite.Web.ViewModels.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Artwork\" />
-  </ItemGroup>
-
 </Project>

@@ -1,6 +1,8 @@
 ﻿using GameWebsite.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace GameWebsite.Data
 {
@@ -27,6 +29,8 @@ namespace GameWebsite.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
             base.OnModelCreating(builder);
         }
     }
