@@ -40,8 +40,9 @@ div.title {
             <div class="gallery" style="width: 100%;">
                 <a target="_blank" href=@artwork.ArtworkURL>
                     <img src="@artwork.ArtworkURL" alt="@artwork.Title" class="card-img-top">
-                    <div class="title">@artwork.Title</div>
+                    <div class="title"><h3>@artwork.Title</h3></div>
                 </a>
+                <a asp-controller="Artwork" asp-action="Delete" asp-route-id="@artwork.Id" method="post" class="btn btn-danger d-flex justify-content-center align-items-center flex-fill mx-1" style="margin-bottom: 6px" onclick="return confirm('Are you sure you want to delete this artwork?');">Delete</a>
             </div>
         </div>
     }

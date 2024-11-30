@@ -4,6 +4,7 @@ using GameWebsite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameWebsite.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241130194029_Reseeding2")]
+    partial class Reseeding2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -140,14 +143,14 @@ namespace GameWebsite.Data.Migrations
                             Id = 2,
                             AddedOn = new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Local),
                             ArtworkURL = "/images/artworks/Lizard Monster.png",
-                            Title = "Lizard Monster"
+                            Title = "Lizard Monster 2"
                         },
                         new
                         {
                             Id = 3,
                             AddedOn = new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Local),
                             ArtworkURL = "/images/artworks/Snel.png",
-                            Title = "Snel"
+                            Title = "Snel 2"
                         },
                         new
                         {
@@ -168,7 +171,7 @@ namespace GameWebsite.Data.Migrations
                             Id = 6,
                             AddedOn = new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Local),
                             ArtworkURL = "/images/artworks/Christmas Tree.png",
-                            Title = "Christmas Tree"
+                            Title = "Christmas Tree 2"
                         });
                 });
 
