@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameWebsite.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241130194029_Reseeding2")]
-    partial class Reseeding2
+    [Migration("20241130195121_RecreateArtwork")]
+    partial class RecreateArtwork
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -143,14 +143,14 @@ namespace GameWebsite.Data.Migrations
                             Id = 2,
                             AddedOn = new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Local),
                             ArtworkURL = "/images/artworks/Lizard Monster.png",
-                            Title = "Lizard Monster 2"
+                            Title = "Lizard Monster"
                         },
                         new
                         {
                             Id = 3,
                             AddedOn = new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Local),
                             ArtworkURL = "/images/artworks/Snel.png",
-                            Title = "Snel 2"
+                            Title = "Snel"
                         },
                         new
                         {
@@ -171,7 +171,7 @@ namespace GameWebsite.Data.Migrations
                             Id = 6,
                             AddedOn = new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Local),
                             ArtworkURL = "/images/artworks/Christmas Tree.png",
-                            Title = "Christmas Tree 2"
+                            Title = "Christmas Tree"
                         });
                 });
 
