@@ -1,8 +1,10 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
+using GameWebsite.Web.ViewModels.Artwork;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using System.Threading.Tasks;
 
 namespace GameWebsite.Web.Controllers
@@ -26,6 +28,7 @@ namespace GameWebsite.Web.Controllers
             return View(artworks);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
@@ -44,6 +47,34 @@ namespace GameWebsite.Web.Controllers
 
                 await context.SaveChangesAsync();
             }
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Add(AddArtworkInputModel model)
+        {
+            if (ModelState.IsValid == false)
+            {
+                return View(model);
+            }
+
+            Artwork artwork = new Artwork()
+            {
+                Title = model.Title,
+                ArtworkURL = model.ArtworkURL,
+            };
+
+            await context.Artworks.AddAsync(artwork);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

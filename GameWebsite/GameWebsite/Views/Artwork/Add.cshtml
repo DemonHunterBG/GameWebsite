@@ -1,0 +1,22 @@
+﻿@using GameWebsite.Web.ViewModels.Artwork
+@model AddArtworkInputModel
+@{
+    ViewData["Title"] = "Add Artwork";
+}
+<div class="row">
+    <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <form asp-action="Add" method="post">
+            <div>
+                <label asp-for="Title" class="form-label-add-edit">Artwork title</label>
+                <input asp-for="Title" class="form-control" aria-required="true" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="ArtworkURL" class="form-label-add-edit">Artwork URL</label>
+                <input asp-for="ArtworkURL" class="form-control" aria-required="true" />
+                <span asp-validation-for="ArtworkURL" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Add Artwork</button>
+        </form>
+    </div>
+</div>

@@ -8,14 +8,14 @@
 <style>
 div.gallery {
   margin: 5px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   float: left;
   width: 300px;
   text-align: center;
 }
 
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 2px solid #777;
 }
 
 div.gallery img {
@@ -28,10 +28,29 @@ div.title {
     padding: 15px;
     text-align: center;
 }
+
+div.control{
+    text-align: center;
+    margin-bottom: 8px;
+}
 </style>
 
-<div class="row" style="text-align: center">
-    <h1>Artworks: @Model.Count()</h1>
+<div class="row control" style="text-align:center">
+    @if (User?.Identity?.IsAuthenticated == true)
+    {
+        <div class="col control" style="text-align:right">
+            <h1>Artworks: @Model.Count()</h1>
+        </div>
+        <div class="col" style="text-align:left">
+            <a asp-controller="Artwork" asp-action="Add" class="btn btn-primary"><i class="fas fa-plus"></i><h2>Add Artwork</h2></a>
+        </div>
+    }
+    else
+    {
+        <div class="col control" style="text-align:center">
+            <h1>Artworks: @Model.Count()</h1>
+        </div>
+    }
 </div>
 <div class="row" style="text-align: center">
     @foreach(var artwork in Model)
@@ -42,7 +61,10 @@ div.title {
                     <img src="@artwork.ArtworkURL" alt="@artwork.Title" class="card-img-top">
                     <div class="title"><h3>@artwork.Title</h3></div>
                 </a>
-                <a asp-controller="Artwork" asp-action="Delete" asp-route-id="@artwork.Id" method="post" class="btn btn-danger d-flex justify-content-center align-items-center flex-fill mx-1" style="margin-bottom: 6px" onclick="return confirm('Are you sure you want to delete this artwork?');">Delete</a>
+                @if (User?.Identity?.IsAuthenticated == true)
+                {
+                    <a asp-controller="Artwork" asp-action="Delete" asp-route-id="@artwork.Id" method="post" class="btn btn-danger d-flex justify-content-center align-items-center flex-fill mx-1" style="margin-bottom: 6px" onclick="return confirm('Are you sure you want to delete this artwork?');">Delete</a>
+                }            
             </div>
         </div>
     }
