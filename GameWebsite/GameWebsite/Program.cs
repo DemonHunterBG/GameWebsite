@@ -1,4 +1,5 @@
 using GameWebsite.Data;
+using GameWebsite.Data.Configuration;
 using GameWebsite.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -43,8 +44,20 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+using(var scope = app.Services.CreateScope())
+{
+    var serviceProvider = scope.ServiceProvider;
+
+    DatabaseSeeder.SeedRoles(serviceProvider);
+    DatabaseSeeder.AssignAdminRole(serviceProvider);
+}
 
 app.Run();
