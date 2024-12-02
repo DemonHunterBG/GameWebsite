@@ -15,7 +15,7 @@ namespace GameWebsite.Data.Configuration
         {
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-            string[] roles = { "Administrator", "User" };
+            string[] roles = { "Admin", "User" };
 
             foreach (var role in roles)
             {
@@ -36,8 +36,7 @@ namespace GameWebsite.Data.Configuration
         {
             var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
-            string userName = "Admin";
-            string adminEmail = "administrator@example.com";
+            string adminEmail = "Admin@example.com";
             string adminPassword = "@Admin123";
 
             var adminUser = userManager.FindByEmailAsync(adminEmail).GetAwaiter().GetResult();
@@ -45,9 +44,10 @@ namespace GameWebsite.Data.Configuration
             {
                 adminUser = new ApplicationUser
                 {
-                    UserName = userName,
+                    UserName = adminEmail,
                     Email = adminEmail
                 };
+
                 var createUserResult = userManager.CreateAsync(adminUser, adminPassword).GetAwaiter().GetResult();
                 if (!createUserResult.Succeeded)
                 {
@@ -55,10 +55,10 @@ namespace GameWebsite.Data.Configuration
                 }
             }
 
-            var isInRole = userManager.IsInRoleAsync(adminUser, "Administrator").GetAwaiter().GetResult();
+            var isInRole = userManager.IsInRoleAsync(adminUser, "Admin").GetAwaiter().GetResult();
             if (!isInRole)
             {
-                var addRoleResult = userManager.AddToRoleAsync(adminUser, "Administrator").GetAwaiter().GetResult();
+                var addRoleResult = userManager.AddToRoleAsync(adminUser, "Admin").GetAwaiter().GetResult();
                 if (!addRoleResult.Succeeded)
                 {
                     throw new Exception($"Failed to assign admin role to user: {adminEmail}");
