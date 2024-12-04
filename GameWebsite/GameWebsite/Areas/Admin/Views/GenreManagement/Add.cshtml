@@ -1,0 +1,17 @@
+﻿@using GameWebsite.Web.Areas.Admin.ViewModels
+@model AddGenreInputModel
+@{
+    ViewData["Title"] = "Add Genre";
+}
+<div class="row">
+    <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <form asp-action="Add" method="post">
+            <div>
+                <label asp-for="GenreName" class="form-label-add-edit">Genre name</label>
+                <input asp-for="GenreName" class="form-control" aria-required="true" />
+                <span asp-validation-for="GenreName" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Add Genre</button>
+        </form>
+    </div>
+</div>
