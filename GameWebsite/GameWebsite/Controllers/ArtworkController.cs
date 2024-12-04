@@ -28,7 +28,7 @@ namespace GameWebsite.Web.Controllers
             return View(artworks);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
@@ -37,6 +37,8 @@ namespace GameWebsite.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
         private async Task DeleteArtwork(int id)
         {
             Artwork? entity = await context.Artworks.FindAsync(id);
@@ -49,14 +51,14 @@ namespace GameWebsite.Web.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Add()
         {
             return View();
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Add(AddArtworkInputModel model)
         {
