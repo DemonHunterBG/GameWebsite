@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameWebsite.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+754d9c8a4bd6e8149af3fbe1c08c67b88e45b255")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c222e0f7997af0b7d80435cf81a2c8282dcf6525")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameWebsite.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameWebsite.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
