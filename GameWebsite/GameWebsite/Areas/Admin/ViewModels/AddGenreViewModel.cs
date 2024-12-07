@@ -4,12 +4,12 @@
     using static Common.EntityValidationConstants.Genre;
     using static Common.EntityValidationMessages.Genre;
 
-    public class AddGenreInputModel
+    public class AddGenreViewModel
     {
         [Required(ErrorMessage = GenreNameRequired)]
         [MinLength(GenreNameMinLength)]
         [MaxLength(GenreNameMaxLength)]
-        public string GenreName { get; set; } = null!;
+        public string GenreName { get; set; } = string.Empty;
     }
 }
 

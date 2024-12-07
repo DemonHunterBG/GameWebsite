@@ -26,6 +26,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/My Softuni Exercises/ASP.NET Advanced/Project/GameWebsite/GameWebsite/GameWebsite/Areas/Admin/Views/GameManagement/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2FtZU1hbmFnZW1lbnRcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/My Softuni Exercises/ASP.NET Advanced/Project/GameWebsite/GameWebsite/GameWebsite/Areas/Admin/Views/GameManagement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2FtZU1hbmFnZW1lbnRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/My Softuni Exercises/ASP.NET Advanced/Project/GameWebsite/GameWebsite/GameWebsite/Areas/Admin/Views/GameManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2FtZU1hbmFnZW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/My Softuni Exercises/ASP.NET Advanced/Project/GameWebsite/GameWebsite/GameWebsite/Areas/Admin/Views/GenreManagement/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2VucmVNYW5hZ2VtZW50XEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

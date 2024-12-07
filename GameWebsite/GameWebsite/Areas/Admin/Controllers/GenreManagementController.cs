@@ -43,19 +43,61 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(AddGenreInputModel model)
+        public async Task<IActionResult> Add(AddGenreViewModel model)
         {
             if (ModelState.IsValid == false)
             {
                 return View(model);
             }
 
-            Genre Genre = new Genre()
+            Genre genre = new Genre()
             {
                 GenreName = model.GenreName
             };
 
-            await context.Genres.AddAsync(Genre);
+            await context.Genres.AddAsync(genre);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var model = await context.Genres
+                .Where(x => x.Id == id)
+                .AsNoTracking()
+                .Select(g => new AddGenreViewModel
+                {
+                    GenreName = g.GenreName,
+                })
+                .FirstOrDefaultAsync();
+
+            if (model == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(AddGenreViewModel model, int id)
+        {
+            if (ModelState.IsValid == false)
+            {
+                return View(model);
+            }
+
+            Genre? entity = await context.Genres.FindAsync(id);
+
+            if (entity == null) 
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            entity.GenreName = model.GenreName;
+
             await context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
@@ -85,48 +127,6 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
 
                 await context.SaveChangesAsync();
             }
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Edit(int id)
-        {
-            var model = await context.Genres
-                .Where(x => x.Id == id)
-                .AsNoTracking()
-                .Select(g => new AddGenreInputModel
-                {
-                    GenreName = g.GenreName,
-                })
-                .FirstOrDefaultAsync();
-
-            if (model == null)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-
-            return View(model);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Edit(AddGenreInputModel model, int id)
-        {
-            if (ModelState.IsValid == false)
-            {
-                return View(model);
-            }
-
-            Genre? entity = await context.Genres.FindAsync(id);
-
-            if (entity == null) 
-            {
-                return RedirectToAction(nameof(Index));
-            }
-
-            entity.GenreName = model.GenreName;
-
-            await context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Index));
         }
     }
 }

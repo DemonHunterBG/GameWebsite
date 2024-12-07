@@ -15,11 +15,11 @@ namespace GameWebsite.Web.ViewModels.Artwork
         [Required(ErrorMessage = ArtworkTitleRequired)]
         [MinLength(ArtworkTitleMinLength)]
         [MaxLength(ArtworkTitleMaxLength)]
-        public string Title { get; set; } = null!;
+        public string Title { get; set; } = string.Empty;
 
         [Required(ErrorMessage =ArtworkURLRequired)]
         [MinLength(ArtworkURLMinLength)]
         [MaxLength(ArtworkTitleMaxLength)]
-        public string ArtworkURL { get; set; } = null!;
+        public string ArtworkURL { get; set; } = string.Empty;
     }
 }

@@ -16,7 +16,7 @@ namespace GameWebsite.Common
         public static class Game
         {
             public const string GameNameRequired = "Game name is required.";
-            public const string GameUrlNameRequired = "Game Url is required.";
+            public const string GameUrlRequired = "Game Url is required.";
         }
 
         public static class Comment
