@@ -1,8 +1,10 @@
-﻿using GameWebsite.Data.Models;
+﻿using GameWebsite.Data;
+using GameWebsite.Data.Models;
 using GameWebsite.Web.Areas.Admin.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameWebsite.Web.Areas.Admin.Controllers
 {
@@ -10,11 +12,13 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class UserManagementController : Controller
     {
+        private readonly ApplicationDbContext context;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
 
-        public UserManagementController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public UserManagementController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
+            this.context = context;
             this.userManager = userManager;
             this.roleManager = roleManager;
         }
@@ -73,6 +77,11 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
 
             if (user != null)
             {
+                List<ApplicationUserGame> applicationUserGames = await context.ApplicationUsersGames
+                    .Where(aug => aug.UserId == userId)
+                    .ToListAsync();
+
+                context.ApplicationUsersGames.RemoveRange(applicationUserGames);
                 await userManager.DeleteAsync(user);
             }
 

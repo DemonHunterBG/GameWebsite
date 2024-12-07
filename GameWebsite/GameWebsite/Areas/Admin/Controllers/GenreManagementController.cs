@@ -76,6 +76,11 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
 
             if (entity != null)
             {
+                List<GameGenre> gameGenres = await context.GamesGenres
+                    .Where(gg => gg.GenreId == id)
+                    .ToListAsync();
+
+                context.GamesGenres.RemoveRange(gameGenres);
                 context.Genres.Remove(entity);
 
                 await context.SaveChangesAsync();
