@@ -2,6 +2,7 @@
 using GameWebsite.Data.Models;
 using GameWebsite.Web.Areas.Admin.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,17 +22,57 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var genreViewModels = await context.Games
+            var allGenres = await context.Genres.ToListAsync();
+
+            var gameViewModels = await context.Games
                 .Select(g => new GameManagementViewModel()
                 {
                     Id = g.Id,
                     Name = g.Name,
+                    Genres = g.Genres.Select(g => g.Genre).ToList(),
+                    AllGenres = allGenres,
                 })
                 .AsNoTracking()
                 .ToListAsync();
 
 
-            return View(genreViewModels);
+            return View(gameViewModels);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> AssignGenre(int gameId, int genreId)
+        {
+            if (!await context.GamesGenres.AnyAsync(gg => gg.GameId == gameId && gg.GenreId == genreId))
+            {
+                GameGenre gameGenre = new GameGenre()
+                {
+                    GameId = gameId,
+                    GenreId = genreId,
+                };
+
+                await context.GamesGenres.AddAsync(gameGenre);
+                await context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveGenre(int gameId, int genreId)
+        {
+            if (await context.GamesGenres.AnyAsync(gg => gg.GameId == gameId && gg.GenreId == genreId))
+            {
+                GameGenre? gameGenre = await context.GamesGenres.FindAsync(gameId, genreId);
+
+                if (gameGenre != null)
+                {
+                    context.GamesGenres.Remove(gameGenre);
+                    await context.SaveChangesAsync();
+                }
+            }
+
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

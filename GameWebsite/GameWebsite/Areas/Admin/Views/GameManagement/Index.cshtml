@@ -17,6 +17,7 @@
         <thead class="thead-light">
             <tr>
                 <th>Game</th>
+                <th>Roles</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -26,6 +27,29 @@
                 <tr>
                     <td>@game.Name</td>
                     <td>
+                        @foreach (var genre in game.Genres)
+                        {
+                            <span class="badge bg-secondary">@genre.GenreName</span>
+                        }
+                    </td>
+                    <td>
+                        <form method="post" asp-action="AssignGenre" asp-controller="GameManagement" asp-area="Admin" class="d-inline">
+                            <input type="hidden" name="gameId" value="@game.Id" />
+                            <select name="genreId" class="form-select d-inline w-auto" asp-items="@(new SelectList(game.AllGenres, "Id", "GenreName"))"></select>
+                            <button type="submit" class="btn btn-primary btn-sm">Assign Genre</button>
+                        </form>
+
+                        <form method="post" asp-action="RemoveGenre" asp-controller="GameManagement" asp-area="Admin" class="d-inline ms-2">
+                            <input type="hidden" name="gameId" value="@game.Id" />
+                            <select name="genreId" class="form-select d-inline w-auto">
+                                @foreach (var genre in game.Genres)
+                                {
+                                    <option value="@genre.Id">"@genre.GenreName"</option>
+                                }
+                            </select>
+                            <button type="submit" class="btn btn-warning btn-sm">Remove Genre</button>
+                        </form>
+
                         <a asp-action="Edit" asp-controller="GameManagement" asp-area="Admin" asp-route-id="@game.Id" class="btn btn-warning btn-sm d-inline"><i class="fas fa-plus"></i>Edit</a>
 
                         <a asp-action="Delete" asp-controller="GameManagement" asp-area="Admin" asp-route-id="@game.Id" method="post" class="btn btn-danger btn-sm d-inline" style="margin-bottom: 6px" onclick="return confirm('Are you sure you want to delete this game?');">Delete</a>

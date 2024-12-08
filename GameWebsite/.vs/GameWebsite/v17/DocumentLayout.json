@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\areas\\admin\\controllers\\gamemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\areas\\admin\\controllers\\gamemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\areas\\admin\\views\\gamemanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\areas\\admin\\views\\gamemanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\areas\\admin\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\areas\\admin\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA558CAC-5EA0-4657-8034-383310A01CA1}|GameWebsite.Data.Models\\GameWebsite.Data.Models.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite.data.models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA558CAC-5EA0-4657-8034-383310A01CA1}|GameWebsite.Data.Models\\GameWebsite.Data.Models.csproj|solutionrelative:gamewebsite.data.models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\areas\\admin\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\areas\\admin\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\areas\\admin\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\areas\\admin\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,17 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Data.Models\\Genre.cs",
+              "RelativeDocumentMoniker": "GameWebsite.Data.Models\\Genre.cs",
+              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Data.Models\\Genre.cs",
+              "RelativeToolTip": "GameWebsite.Data.Models\\Genre.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T16:39:58.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameManagementController.cs",
+              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Controllers\\GameManagementController.cs",
+              "RelativeDocumentMoniker": "GameWebsite\\Areas\\Admin\\Controllers\\GameManagementController.cs",
+              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Controllers\\GameManagementController.cs",
+              "RelativeToolTip": "GameWebsite\\Areas\\Admin\\Controllers\\GameManagementController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAEoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T16:43:05.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Views\\GameManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "GameWebsite\\Areas\\Admin\\Views\\GameManagement\\Index.cshtml",
+              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Views\\GameManagement\\Index.cshtml",
+              "RelativeToolTip": "GameWebsite\\Areas\\Admin\\Views\\GameManagement\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T16:34:46.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserManagementController.cs",
+              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Controllers\\UserManagementController.cs",
+              "RelativeDocumentMoniker": "GameWebsite\\Areas\\Admin\\Controllers\\UserManagementController.cs",
+              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Controllers\\UserManagementController.cs",
+              "RelativeToolTip": "GameWebsite\\Areas\\Admin\\Controllers\\UserManagementController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwC8AAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T16:34:17.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Views\\UserManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "GameWebsite\\Areas\\Admin\\Views\\UserManagement\\Index.cshtml",
+              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Views\\UserManagement\\Index.cshtml",
+              "RelativeToolTip": "GameWebsite\\Areas\\Admin\\Views\\UserManagement\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T16:34:20.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\ViewModels\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "GameWebsite\\Areas\\Admin\\ViewModels\\UserViewModel.cs",
+              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\ViewModels\\UserViewModel.cs",
+              "RelativeToolTip": "GameWebsite\\Areas\\Admin\\ViewModels\\UserViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T16:36:10.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Program.cs",
               "RelativeDocumentMoniker": "GameWebsite\\Program.cs",
               "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Program.cs",
               "RelativeToolTip": "GameWebsite\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T16:37:42.92Z",
               "EditorCaption": ""
