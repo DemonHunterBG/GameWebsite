@@ -1,9 +1,6 @@
 ﻿@using GameWebsite.Data.Models
 @using Microsoft.AspNetCore.Identity;
 
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
-
 @model List<Artwork>
 
 @{
@@ -30,7 +27,7 @@ div.gallery img {
 }
 
 div.title {
-    padding: 15px;
+    padding: 4px;
     text-align: center;
 }
 
@@ -64,7 +61,7 @@ div.control{
             <div class="gallery" style="width: 100%;">
                 <a target="_blank" href="@artwork.ArtworkURL">
                     <img src="@artwork.ArtworkURL" alt="@artwork.Title" class="card-img-top">
-                    <div class="title"><h3>@artwork.Title</h3></div>
+                    <div class="title"><h4>@artwork.Title</h4></div>
                 </a>
                 @if (User?.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
                 {

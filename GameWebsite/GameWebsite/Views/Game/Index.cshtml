@@ -1,0 +1,66 @@
+﻿@using GameWebsite.Data.Models
+@using Microsoft.AspNetCore.Identity;
+@using GameWebsite.Web.ViewModels.Game;
+@using static GameWebsite.Common.ApplicationConstants;
+
+@model List<GameListViewModel>
+
+@{
+    ViewData["Title"] = "Games";
+}
+
+<style>
+div.gallery {
+  margin: 5px;
+  border: 2px solid #ccc;
+  float: left;
+  width: 300px;
+  text-align: center;
+}
+
+div.gallery:hover {
+    border: 2px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.title {
+    padding: 4px;
+    text-align: center;
+}
+
+div.control{
+    text-align: center;
+    margin-bottom: 8px;
+}
+</style>
+
+<div class="row" style="text-align: center">
+    @foreach(var game in Model)
+    {
+       <div class="col-md-3 mb-4">
+            <div class="gallery" style="width: 100%;">
+                <a asp-controller="Game" asp-action="Game" asp-route-id="@game.Id" method="post">
+                    @if (!string.IsNullOrEmpty(game.ImageURL))
+                    {
+                        <img src="@game.ImageURL" alt="@game.Name" class="card-img-top">
+                    }
+                    else
+                    {
+                        <img src="@NoImageURL" alt="No Image Available" class="card-img-top">
+                    }
+                    <div class="title"><h4>@game.Name</h4></div>
+                </a>
+                @if (User?.Identity?.IsAuthenticated == true && !game.HasFavored)
+                {
+                    <a asp-controller="Game" asp-action="Favorite" asp-route-id="@game.Id" method="post" class="btn btn-danger d-flex justify-content-center align-items-center flex-fill mx-1" style="margin-bottom: 6px">Favorite</a>
+                }            
+            </div>
+        </div>
+    }
+</div>
