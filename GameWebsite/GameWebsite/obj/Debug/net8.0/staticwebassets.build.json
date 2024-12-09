@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MSFG8JB868z0AQsKWsOL+Z/PWdizi/QHUztLmL208Vo=",
+  "Hash": "74TgCFwa+jH9PoGObsSuilXYB/4rcjKXLuzNzs//JRw=",
   "Source": "GameWebsite.Web",
   "BasePath": "_content/GameWebsite.Web",
   "Mode": "Default",
@@ -1347,12 +1347,12 @@
       "OriginalItemSpec": "wwwroot\\images\\artworks\\Zoom Rocket.png"
     },
     {
-      "Identity": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\no-image.jpg",
+      "Identity": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\images\\no-image2.jpg",
       "SourceId": "GameWebsite.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\",
       "BasePath": "_content/GameWebsite.Web",
-      "RelativePath": "images/no-image.jpg",
+      "RelativePath": "images/no-image2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1363,7 +1363,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\no-image.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\no-image2.jpg"
     },
     {
       "Identity": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\js\\site.js",

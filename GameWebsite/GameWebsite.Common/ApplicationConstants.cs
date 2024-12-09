@@ -8,7 +8,7 @@ namespace GameWebsite.Common
 {
     public static class ApplicationConstants
     {
-        public const string NoImageURL = "/images/no-image.jpg";
+        public const string NoImageURL = "/images/no-image2.jpg";
         //public const string DateDefaultFormat = "dd-MM-yyyy";
     }
 }

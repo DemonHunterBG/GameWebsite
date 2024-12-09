@@ -1,0 +1,21 @@
+﻿@using GameWebsite.Web.ViewModels.Game
+
+@model GameViewModel
+
+@{
+
+    ViewData["Title"] = Model.Name;
+}
+
+
+<div class="row" style="text-align: center">
+    @if (Model.IsGameURLWorking)
+    {
+        <iframe src="@Model.GameURL" height="723" width="1283" title=""></iframe>
+    }
+    else
+    {
+        <h2>Game not found</h2>
+    }
+
+</div>
