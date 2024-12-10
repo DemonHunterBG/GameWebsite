@@ -20,14 +20,9 @@ namespace GameWebsite.Web
 
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
-            {
-                ConfigureIdentity(options, builder);
-            })
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options => ConfigureIdentity(options, builder)) //CHANGED TO FALSE
                 .AddRoles<IdentityRole>()
-                .AddSignInManager<SignInManager<ApplicationUser>>()
-                .AddUserManager<UserManager<ApplicationUser>>();
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
