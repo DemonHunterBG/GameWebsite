@@ -12,7 +12,7 @@ namespace GameWebsite.Web.ViewModels.Game
 
         public required string Name { get; set; }
 
-        public required string ImageURL { get; set; }
+        public string? ImageURL { get; set; }
 
         public required bool HasFavored { get; set; }
     }

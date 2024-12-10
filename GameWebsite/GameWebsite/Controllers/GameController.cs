@@ -1,11 +1,13 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
 using GameWebsite.Web.ViewModels.Game;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 using System.Security.Claims;
+using System.Text.RegularExpressions;
 
 namespace GameWebsite.Web.Controllers
 {
@@ -88,6 +90,83 @@ namespace GameWebsite.Web.Controllers
             }
 
             return View(model);
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> Favorites()
+        {
+            var games = await context.Games
+                .Where(g => g.Favorites.Any(f => f.UserId == GetCurrentUserId()))
+                .Select(g => new GameListViewModel()
+                {
+                    Id = g.Id,
+                    Name = g.Name,
+                    ImageURL = g.ImageURL,
+                    HasFavored = true,
+                })
+                .AsNoTracking()
+                .ToListAsync();
+
+            return View(games);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> AddToFavorites(int gameId)
+        {
+            Game? entity = await context.Games
+                .Where(g => g.Id == gameId)
+                .Include(g => g.Favorites)
+                .FirstOrDefaultAsync();
+
+            if (entity == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            string currentUserId = GetCurrentUserId() ?? string.Empty;
+
+            if (!entity.Favorites.Any(f => f.UserId == currentUserId))
+            {
+                entity.Favorites.Add(new ApplicationUserGame()
+                {
+                    UserId = currentUserId,
+                    GameId = gameId
+                });
+
+                await context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(Favorites));
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> RemoveFromFavorites(int gameId)
+        {
+            Game? entity = await context.Games
+            .Where(g => g.Id == gameId)
+            .Include(g => g.Favorites)
+            .FirstOrDefaultAsync();
+
+            if (entity == null)
+            {
+                return RedirectToAction(nameof(Favorites));
+            }
+
+            string currentUserId = GetCurrentUserId() ?? string.Empty;
+
+            ApplicationUserGame? current = entity.Favorites.FirstOrDefault(f => f.UserId == currentUserId);
+
+            if (current != null) 
+            {
+                entity.Favorites.Remove(current);
+
+                await context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(Favorites));
         }
 
         private string? GetCurrentUserId()

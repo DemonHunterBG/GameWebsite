@@ -3,19 +3,39 @@
 @model GameViewModel
 
 @{
-
     ViewData["Title"] = Model.Name;
 }
+
+<style>
+pre{
+    white-space: pre-wrap;
+    word-break: keep-all;
+}
+</style>
 
 
 <div class="row" style="text-align: center">
     @if (Model.IsGameURLWorking)
     {
-        <iframe src="@Model.GameURL" height="723" width="1283" title=""></iframe>
+        <iframe src="@Model.GameURL" height="725" width="1285" title=""></iframe>
     }
     else
     {
         <h2>Game not found</h2>
     }
 
+</div>
+<div class="row" style="text-align: center">
+    <h1>@Model.Name</h1>
+    <p>Release Date: "@Model.AddedOn.ToShortDateString()"</p>
+    <p>Genres: @String.Join(", ", Model.Genres)</p>
+    <pre>@Model.Description</pre>
+    <h3>Comments</h3>
+    <hr>
+    @foreach(var comment in Model.Comments)
+    {
+        <p>@comment.AddedOn</p>
+        <h4>@comment.CreatorName</h4>
+        <pre>@comment.Text</pre>
+    }
 </div>

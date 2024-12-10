@@ -6,7 +6,7 @@
 @model List<GameListViewModel>
 
 @{
-    ViewData["Title"] = "Games";
+    ViewData["Title"] = "Favorites";
 }
 
 <style>
@@ -45,7 +45,7 @@ div.control{
     {
        <div class="col-md-3 mb-4">
             <div class="gallery" style="width: 100%;">
-                <a asp-controller="Game" asp-action="Game" asp-route-id="@game.Id" method="get">
+                <a asp-controller="Game" asp-action="Game" asp-route-id="@game.Id" method="post">
                     @if (!string.IsNullOrEmpty(game.ImageURL))
                     {
                         <img src="@game.ImageURL" alt="@game.Name" class="card-img-top">
@@ -56,13 +56,10 @@ div.control{
                     }
                     <div class="title"><h4>@game.Name</h4></div>
                 </a>
-                @if (User?.Identity?.IsAuthenticated == true && !game.HasFavored)
-                {
-                    <form asp-controller="Game" asp-action="AddToFavorites" method="post" class="d-flex justify-content-center align-items-center flex-fill">
-                        <input type="hidden" name="gameId" value="@game.Id" />
-                        <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center flex-fill mx-1" style="margin-bottom: 6px">Favorite</button>
-                    </form>
-                }            
+                <form asp-controller="Game" asp-action="RemoveFromFavorites" method="post" class="d-flex justify-content-center align-items-center flex-fill">
+                    <input type="hidden" name="gameId" value="@game.Id" />
+                    <button type="submit" class="btn btn-danger d-flex justify-content-center align-items-center flex-fill mx-1" style="margin-bottom: 6px">Unfavorite</button>
+                </form>
             </div>
         </div>
     }
