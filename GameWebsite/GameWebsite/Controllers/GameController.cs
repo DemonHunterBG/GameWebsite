@@ -1,5 +1,6 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
+using GameWebsite.Web.ViewModels.Artwork;
 using GameWebsite.Web.ViewModels.Game;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -45,6 +46,7 @@ namespace GameWebsite.Web.Controllers
                 .AsNoTracking()
                 .Select(g => new GameViewModel()
                 {
+                    Id = id,
                     Name = g.Name,
                     GameURL = g.GameURL,
                     IsGameURLWorking = false,
@@ -53,6 +55,7 @@ namespace GameWebsite.Web.Controllers
                     Genres = g.Genres.Select(g => g.Genre.GenreName).ToList(),
                     Comments = g.Comments.Select(c => new GameCommentViewModel()
                     {
+                        Id = c.Id,
                         Text = c.Text,
                         AddedOn = c.AddedOn,
                         CreatorName = c.User.UserName,
@@ -167,6 +170,62 @@ namespace GameWebsite.Web.Controllers
             }
 
             return RedirectToAction(nameof(Favorites));
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult AddComment(int gameId)
+        {
+            var model = new AddGameCommentViewModel()
+            {
+                GameId = gameId
+            };
+
+            return View(model);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> AddComment(AddGameCommentViewModel model, int gameId)
+        {
+            if (ModelState.IsValid == false)
+            {
+                return View(model);
+            }
+
+            GameComment comment = new GameComment()
+            {
+                Text = model.Text,
+                UserId = GetCurrentUserId(),
+                GameId = gameId,
+            };
+
+            await context.GameComments.AddAsync(comment);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Game), new {id = gameId});
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> DeleteComment(int commentId)
+        {
+            var comment = await context.GameComments.FindAsync(commentId);
+
+            if (comment == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            if (!(comment?.UserId == GetCurrentUserId() || User.IsInRole("Admin")))
+            {
+                return RedirectToAction(nameof(Game), new {id = comment.GameId});
+            }
+
+            context.GameComments.Remove(comment);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Game), new { id = comment.GameId });
         }
 
         private string? GetCurrentUserId()

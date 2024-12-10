@@ -8,6 +8,8 @@ namespace GameWebsite.Web.ViewModels.Game
 {
     public class GameViewModel
     {
+        public required int Id { get; set; }
+
         public required string Name { get; set; }
 
         public required string GameURL { get; set; }
