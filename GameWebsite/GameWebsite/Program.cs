@@ -2,6 +2,7 @@ using GameWebsite.Data;
 using GameWebsite.Data.Configuration;
 using GameWebsite.Data.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameWebsite.Web
@@ -24,7 +25,11 @@ namespace GameWebsite.Web
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            });
+
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
