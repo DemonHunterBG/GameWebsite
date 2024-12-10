@@ -41,6 +41,11 @@ namespace GameWebsite.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Game(int id)
         {
+            if (!context.Games.Any(g => g.Id == id))
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
             var model = await context.Games
                 .Where(g => g.Id == id)
                 .AsNoTracking()

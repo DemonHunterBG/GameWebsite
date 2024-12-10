@@ -44,6 +44,8 @@ namespace GameWebsite.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
+
             app.UseRouting();
 
             app.UseAuthentication();

@@ -31,6 +31,7 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
 
             foreach (var user in users)
             {
+                int commments = user.GameComments.Count;
                 var roles = await userManager.GetRolesAsync(user);
                 userViewModels.Add(new UserViewModel
                 {
