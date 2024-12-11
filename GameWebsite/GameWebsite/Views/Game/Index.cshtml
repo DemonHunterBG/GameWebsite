@@ -40,6 +40,28 @@ div.control{
 }
 </style>
 
+<form method="get" asp-action="Index" class="mb-4">
+    <div class="row">
+        <div class="col">
+            <input type="text"
+                   name="searchQuery"
+                   class="form-control"
+                   placeholder="Search by title..."
+                   value="@ViewData["SearchQuery"]" />
+        </div>
+        <div class="col">
+            <input type="text"
+                   name="genre"
+                   class="form-control"
+                   placeholder="Filter by genre..."
+                   value="@ViewData["Genre"]" />
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Filter</button>
+            <a asp-action="Index">Back to Full List</a>
+        </div>
+    </div>
+</form>
 <div class="row" style="text-align: center">
     @foreach(var game in Model)
     {

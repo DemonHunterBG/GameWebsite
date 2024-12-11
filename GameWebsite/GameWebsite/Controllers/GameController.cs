@@ -22,20 +22,39 @@ namespace GameWebsite.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? searchQuery = null, string? genre = null)
         {
+
             var games = await context.Games
-                .Select(g => new GameListViewModel()
-                {
-                    Id = g.Id,
-                    Name = g.Name,
-                    ImageURL = g.ImageURL,
-                    HasFavored = g.Favorites.Any(f => f.UserId == GetCurrentUserId()),
-                })
                 .AsNoTracking()
+                .Include(g => g.Genres)
+                .ThenInclude(g => g.Genre)
                 .ToListAsync();
 
-            return View(games);
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                searchQuery = searchQuery.ToLower().Trim();
+                games = games.Where(g => g.Name.ToLower().Contains(searchQuery)).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(genre))
+            {
+                genre = genre.ToLower().Trim();
+                games = games.Where(g => g.Genres.Any(ge => ge.Genre.GenreName.ToLower().Contains(genre))).ToList();
+            }
+
+            var gamesUpdated = games.Select(g => new GameListViewModel()
+            {
+                Id = g.Id,
+                Name = g.Name,
+                ImageURL = g.ImageURL,
+                HasFavored = g.Favorites.Any(f => f.UserId == GetCurrentUserId()),
+            }).ToList();
+
+            ViewData["SearchQuery"] = searchQuery;
+            ViewData["Genre"] = genre;
+
+            return View(gamesUpdated);
         }
 
         [HttpGet]
