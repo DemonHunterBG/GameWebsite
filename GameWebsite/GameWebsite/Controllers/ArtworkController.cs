@@ -19,11 +19,23 @@ namespace GameWebsite.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 12)
         {
             var artworks = await context.Artworks
                 .AsNoTracking()
                 .ToListAsync();
+
+            int totalArtworks = artworks.Count;
+            int totalPages = (int)Math.Ceiling(totalArtworks / (double)pageSize);
+
+            artworks = artworks
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            ViewData["TotalArtworks"] = totalArtworks;
+            ViewData["CurrentPage"] = pageNumber;
+            ViewData["TotalPages"] = totalPages;
 
             return View(artworks);
         }

@@ -41,7 +41,7 @@ div.control{
     @if (User?.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
     {
         <div class="col control" style="text-align:right">
-            <h1>Artworks: @Model.Count()</h1>
+            <h1>Artworks: @ViewData["TotalArtworks"]</h1>
         </div>
         <div class="col" style="text-align:left">
             <a asp-controller="Artwork" asp-action="Add" class="btn btn-primary"><i class="fas fa-plus"></i><h2>Add Artwork</h2></a>
@@ -50,7 +50,7 @@ div.control{
     else
     {
         <div class="col control" style="text-align:center">
-            <h1>Artworks: @Model.Count()</h1>
+            <h1>Artworks: @ViewData["TotalArtworks"]</h1>
         </div>
     }
 </div>
@@ -71,3 +71,38 @@ div.control{
         </div>
     }
 </div>
+<nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination">
+        @if ((int)ViewData["CurrentPage"] > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="Index"
+                   asp-route-pageNumber="@( (int)ViewData["CurrentPage"] - 1 )">
+                    Previous
+                </a>
+            </li>
+        }
+
+        @for (int i = 1; i <= (int)ViewData["TotalPages"]; i++)
+        {
+            <li class="page-item @(i == (int)ViewData["CurrentPage"] ? "active" : "")">
+                <a class="page-link" asp-action="Index"
+                   asp-route-pageNumber="@i">
+                    @i
+                </a>
+            </li>
+        }
+
+        @if ((int)ViewData["CurrentPage"] < (int)ViewData["TotalPages"])
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="Index"
+                   asp-route-pageNumber="@( (int)ViewData["CurrentPage"] + 1 )">
+                    Next
+                </a>
+            </li>
+        }
+    </ul>
+</nav>
+
+
