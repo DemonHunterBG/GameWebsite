@@ -27,6 +27,7 @@ namespace GameWebsite.Web.Controllers
 
             var games = await context.Games
                 .AsNoTracking()
+                .Include(g => g.Favorites)
                 .Include(g => g.Genres)
                 .ThenInclude(g => g.Genre)
                 .ToListAsync();
