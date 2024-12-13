@@ -650,7 +650,10 @@
       },
       "GameWebsite.Common/1.0.0": {
         "runtime": {
-          "GameWebsite.Common.dll": {}
+          "GameWebsite.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "GameWebsite.Data/1.0.0": {
@@ -662,7 +665,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11"
         },
         "runtime": {
-          "GameWebsite.Data.dll": {}
+          "GameWebsite.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "GameWebsite.Data.Models/1.0.0": {
@@ -672,7 +678,10 @@
           "Microsoft.EntityFrameworkCore": "8.0.11"
         },
         "runtime": {
-          "GameWebsite.Data.Models.dll": {}
+          "GameWebsite.Data.Models.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -1,6 +1,8 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
-using GameWebsite.Web.Areas.Admin.ViewModels;
+using GameWebsite.Services.Data.Interfaces;
+using GameWebsite.Web.ViewModels;
+using GameWebsite.Web.ViewModels.AdminViewModels;
 using GameWebsite.Web.ViewModels.Artwork;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -14,24 +16,18 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
     public class GenreManagementController : Controller
     {
         private readonly ApplicationDbContext context;
+        private readonly IGenreService genreService;
 
-        public GenreManagementController(ApplicationDbContext context)
+        public GenreManagementController(ApplicationDbContext context, IGenreService genreService)
         {
             this.context = context;
+            this.genreService = genreService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var genreViewModels = await context.Genres
-                .Select(g => new GenreViewModel()
-                {
-                    Id = g.Id,
-                    GenreName = g.GenreName,
-                })
-                .AsNoTracking()
-                .ToListAsync();
-
+            var genreViewModels = await genreService.GetAllAsync();
 
             return View(genreViewModels);
         }
@@ -50,13 +46,7 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
                 return View(model);
             }
 
-            Genre genre = new Genre()
-            {
-                GenreName = model.GenreName
-            };
-
-            await context.Genres.AddAsync(genre);
-            await context.SaveChangesAsync();
+            await this.genreService.AddAsync(model);
 
             return RedirectToAction(nameof(Index));
         }
@@ -64,14 +54,7 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var model = await context.Genres
-                .Where(x => x.Id == id)
-                .AsNoTracking()
-                .Select(g => new AddGenreViewModel
-                {
-                    GenreName = g.GenreName,
-                })
-                .FirstOrDefaultAsync();
+            var model = await genreService.GetByIdAttachedAsync(id);
 
             if (model == null)
             {
@@ -89,16 +72,14 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
                 return View(model);
             }
 
-            Genre? entity = await context.Genres.FindAsync(id);
+            Genre? entity = await genreService.GetByIdAsync(id);
 
             if (entity == null) 
             {
                 return RedirectToAction(nameof(Index));
             }
 
-            entity.GenreName = model.GenreName;
-
-            await context.SaveChangesAsync();
+            await genreService.UpdateAsync(entity, model);
 
             return RedirectToAction(nameof(Index));
         }
@@ -114,18 +95,11 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
         [HttpPost]
         private async Task DeleteGenre(int id)
         {
-            Genre? entity = await context.Genres.FindAsync(id);
+            Genre? entity = await genreService.GetByIdAsync(id);
 
             if (entity != null)
             {
-                List<GameGenre> gameGenres = await context.GamesGenres
-                    .Where(gg => gg.GenreId == id)
-                    .ToListAsync();
-
-                context.GamesGenres.RemoveRange(gameGenres);
-                context.Genres.Remove(entity);
-
-                await context.SaveChangesAsync();
+                await genreService.DeleteAsync(id);
             }
         }
     }

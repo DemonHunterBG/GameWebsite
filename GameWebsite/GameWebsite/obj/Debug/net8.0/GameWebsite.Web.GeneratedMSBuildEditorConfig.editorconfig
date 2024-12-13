@@ -25,6 +25,8 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
 [D:/My Softuni Exercises/ASP.NET Advanced/Project/GameWebsite/GameWebsite/GameWebsite/Areas/Admin/Views/GameManagement/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2FtZU1hbmFnZW1lbnRcQWRkLmNzaHRtbA==

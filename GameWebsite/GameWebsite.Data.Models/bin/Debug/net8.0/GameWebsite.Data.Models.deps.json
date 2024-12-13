@@ -210,7 +210,10 @@
       },
       "GameWebsite.Common/1.0.0": {
         "runtime": {
-          "GameWebsite.Common.dll": {}
+          "GameWebsite.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

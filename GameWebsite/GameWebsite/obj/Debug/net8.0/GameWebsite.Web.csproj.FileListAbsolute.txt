@@ -302,3 +302,9 @@ D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWeb
 D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\bin\Debug\net8.0\GameWebsite.Web.staticwebassets.endpoints.json
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\bin\Debug\net8.0\GameWebsite.Services.Data.dll
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\bin\Debug\net8.0\GameWebsite.Services.Data.pdb
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\obj\Debug\net8.0\staticwebassets\msbuild.GameWebsite.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\My Softuni Exercises\ASP.NET Advanced\Project\GameWebsite\GameWebsite\GameWebsite\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

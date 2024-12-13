@@ -1,6 +1,6 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
-using GameWebsite.Web.Areas.Admin.ViewModels;
+using GameWebsite.Web.ViewModels.AdminViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

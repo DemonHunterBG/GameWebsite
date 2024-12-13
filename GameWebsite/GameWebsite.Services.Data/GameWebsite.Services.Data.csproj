@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GameWebsite.Data.Models\GameWebsite.Data.Models.csproj" />
+    <ProjectReference Include="..\GameWebsite.Data\GameWebsite.Data.csproj" />
+    <ProjectReference Include="..\GameWebsite.ViewModels\GameWebsite.Web.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>

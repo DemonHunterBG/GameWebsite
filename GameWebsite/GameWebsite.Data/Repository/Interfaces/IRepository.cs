@@ -16,7 +16,7 @@ namespace GameWebsite.Data.Repository.Interfaces
 
         Task<IEnumerable<TType>> GetAllAsync();
 
-        IEnumerable<TType> GetAllAttached();
+        IQueryable<TType> GetAllAttached();
 
         void Add(TType item);
 
@@ -25,6 +25,10 @@ namespace GameWebsite.Data.Repository.Interfaces
         bool Delete(TId id);
 
         Task<bool> DeleteAsync(TId id);
+
+        bool DeleteEntity(TType item);
+
+        Task<bool> DeleteEntityAsync(TType item);
 
         bool Update(TType item);
 

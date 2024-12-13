@@ -1,10 +1,10 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
-using GameWebsite.Web.Areas.Admin.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using GameWebsite.Web.ViewModels.AdminViewModels;
 
 namespace GameWebsite.Web.Areas.Admin.Controllers
 {

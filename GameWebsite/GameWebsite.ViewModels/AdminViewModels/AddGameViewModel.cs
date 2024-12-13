@@ -1,4 +1,4 @@
-﻿namespace GameWebsite.Web.Areas.Admin.ViewModels
+﻿namespace GameWebsite.Web.ViewModels.AdminViewModels
 {
     using System.ComponentModel.DataAnnotations;
     using static Common.EntityValidationConstants.Game;

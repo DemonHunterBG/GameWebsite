@@ -1,6 +1,6 @@
 ﻿using GameWebsite.Data.Models;
 
-namespace GameWebsite.Web.Areas.Admin.ViewModels
+namespace GameWebsite.Web.ViewModels.AdminViewModels
 {
     public class GameManagementViewModel
     {

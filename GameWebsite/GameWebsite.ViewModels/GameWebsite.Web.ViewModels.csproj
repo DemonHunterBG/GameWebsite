@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GameWebsite.Common\GameWebsite.Common.csproj" />
+    <ProjectReference Include="..\GameWebsite.Data.Models\GameWebsite.Data.Models.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameWebsite.Web.bundle.scp.css",
-      "PackagePath": "staticwebassets\\GameWebsite.Web.bundle.scp.css"
+      "PackagePath": "staticwebassets\\GameWebsite.Web.ffzparle13.bundle.scp.css"
     },
     {
       "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\css\\site.css",
@@ -271,6 +271,10 @@
     {
       "Id": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GameWebsite.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GameWebsite.Web.Microsoft.AspNetCore.StaticWebAssets.props",

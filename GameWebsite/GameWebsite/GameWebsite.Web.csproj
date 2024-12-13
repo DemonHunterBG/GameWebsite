@@ -29,6 +29,7 @@
     <ProjectReference Include="..\GameWebsite.Common\GameWebsite.Common.csproj" />
     <ProjectReference Include="..\GameWebsite.Data\GameWebsite.Data.csproj" />
     <ProjectReference Include="..\GameWebsite.Infrastrucutre\GameWebsite.Web.Infrastructure.csproj" />
+    <ProjectReference Include="..\GameWebsite.Services.Data\GameWebsite.Services.Data.csproj" />
     <ProjectReference Include="..\GameWebsite.ViewModels\GameWebsite.Web.ViewModels.csproj" />
   </ItemGroup>
 

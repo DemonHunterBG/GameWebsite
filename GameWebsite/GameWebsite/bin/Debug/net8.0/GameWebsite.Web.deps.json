@@ -10,6 +10,7 @@
         "dependencies": {
           "GameWebsite.Common": "1.0.0",
           "GameWebsite.Data": "1.0.0",
+          "GameWebsite.Services.Data": "1.0.0",
           "GameWebsite.Web.Infrastructure": "1.0.0",
           "GameWebsite.Web.ViewModels": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.11",
@@ -2189,7 +2190,10 @@
       },
       "GameWebsite.Common/1.0.0": {
         "runtime": {
-          "GameWebsite.Common.dll": {}
+          "GameWebsite.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "GameWebsite.Data/1.0.0": {
@@ -2201,7 +2205,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11"
         },
         "runtime": {
-          "GameWebsite.Data.dll": {}
+          "GameWebsite.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "GameWebsite.Data.Models/1.0.0": {
@@ -2211,7 +2218,23 @@
           "Microsoft.EntityFrameworkCore": "8.0.11"
         },
         "runtime": {
-          "GameWebsite.Data.Models.dll": {}
+          "GameWebsite.Data.Models.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GameWebsite.Services.Data/1.0.0": {
+        "dependencies": {
+          "GameWebsite.Data": "1.0.0",
+          "GameWebsite.Data.Models": "1.0.0",
+          "GameWebsite.Web.ViewModels": "1.0.0"
+        },
+        "runtime": {
+          "GameWebsite.Services.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "GameWebsite.Web.Infrastructure/1.0.0": {
@@ -2220,15 +2243,22 @@
           "Microsoft.AspNetCore.Http.Abstractions": "2.1.1"
         },
         "runtime": {
-          "GameWebsite.Web.Infrastructure.dll": {}
+          "GameWebsite.Web.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "GameWebsite.Web.ViewModels/1.0.0": {
         "dependencies": {
-          "GameWebsite.Common": "1.0.0"
+          "GameWebsite.Common": "1.0.0",
+          "GameWebsite.Data.Models": "1.0.0"
         },
         "runtime": {
-          "GameWebsite.Web.ViewModels.dll": {}
+          "GameWebsite.Web.ViewModels.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -3482,6 +3512,11 @@
       "sha512": ""
     },
     "GameWebsite.Data.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameWebsite.Services.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

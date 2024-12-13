@@ -41,7 +41,7 @@
             return await this.dbSet.ToArrayAsync();
         }
 
-        public IEnumerable<TType> GetAllAttached()
+        public IQueryable<TType> GetAllAttached()
         {
             return this.dbSet.AsQueryable();
         }
@@ -86,6 +86,36 @@
             await this.dbContext.SaveChangesAsync();
 
             return true;
+        }
+
+        public bool DeleteEntity(TType item)
+        {
+            try
+            {
+                this.dbSet.Remove(item);
+                this.dbContext.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteEntityAsync(TType item)
+        {
+            try
+            {
+                this.dbSet.Remove(item);
+                await this.dbContext.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool Update(TType item)
