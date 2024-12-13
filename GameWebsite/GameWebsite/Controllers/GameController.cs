@@ -1,5 +1,6 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
+using GameWebsite.Data.Repository.Interfaces;
 using GameWebsite.Web.ViewModels.Artwork;
 using GameWebsite.Web.ViewModels.Game;
 using Microsoft.AspNetCore.Authorization;
@@ -15,10 +16,12 @@ namespace GameWebsite.Web.Controllers
     public class GameController : Controller
     {
         private readonly ApplicationDbContext context;
+        private IRepository<Game, int> gameRepository;
 
-        public GameController(ApplicationDbContext context)
+        public GameController(ApplicationDbContext context, IRepository<Game, int> gameRepository)
         {
             this.context = context;
+            this.gameRepository = gameRepository;
         }
 
         [HttpGet]

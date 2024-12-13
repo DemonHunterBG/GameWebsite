@@ -1,6 +1,9 @@
 using GameWebsite.Data;
 using GameWebsite.Data.Configuration;
 using GameWebsite.Data.Models;
+using GameWebsite.Data.Repository;
+using GameWebsite.Data.Repository.Interfaces;
+using GameWebsite.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +27,15 @@ namespace GameWebsite.Web
             builder.Services.AddDefaultIdentity<ApplicationUser>(options => ConfigureIdentity(options, builder)) //CHANGED TO FALSE
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
+
+            //builder.Services.AddScoped<IRepository<ApplicationUserGame, object>, BaseRepository<ApplicationUserGame, object>>();
+            //builder.Services.AddScoped<IRepository<Game, int>, BaseRepository<Game, int>>();
+            //builder.Services.AddScoped<IRepository<GameComment, int>, BaseRepository<GameComment, int>>();
+            //builder.Services.AddScoped<IRepository<GameGenre, object>, BaseRepository<GameGenre, object>>();
+            //builder.Services.AddScoped<IRepository<Genre, int>, BaseRepository<Genre, int>>();
+            //builder.Services.AddScoped<IRepository<Artwork, int>, BaseRepository<Artwork, int>>();
 
             builder.Services.AddControllersWithViews(options =>
             {
