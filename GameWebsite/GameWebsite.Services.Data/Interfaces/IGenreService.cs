@@ -12,11 +12,11 @@ namespace GameWebsite.Services.Data.Interfaces
     {
         Task<IEnumerable<GenreViewModel>> GetAllAsync();
 
-        Task AddAsync(AddGenreViewModel model);
-
-        Task<AddGenreViewModel> GetByIdAttachedAsync(int id);
+        Task<AddGenreViewModel> GetByIdForEditAsync(int id);
 
         Task<Genre> GetByIdAsync(int id);
+
+        Task AddAsync(AddGenreViewModel model);
 
         Task UpdateAsync(Genre entity, AddGenreViewModel model);
 

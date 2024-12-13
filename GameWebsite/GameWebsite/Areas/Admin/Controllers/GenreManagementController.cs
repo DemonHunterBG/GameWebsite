@@ -15,12 +15,10 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class GenreManagementController : Controller
     {
-        private readonly ApplicationDbContext context;
         private readonly IGenreService genreService;
 
-        public GenreManagementController(ApplicationDbContext context, IGenreService genreService)
+        public GenreManagementController(IGenreService genreService)
         {
-            this.context = context;
             this.genreService = genreService;
         }
 
@@ -54,7 +52,7 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var model = await genreService.GetByIdAttachedAsync(id);
+            var model = await genreService.GetByIdForEditAsync(id);
 
             if (model == null)
             {

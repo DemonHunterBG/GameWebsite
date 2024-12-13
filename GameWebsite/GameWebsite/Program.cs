@@ -40,6 +40,8 @@ namespace GameWebsite.Web
 
             builder.Services.AddScoped<IGenreService, GenreService>();
             builder.Services.AddScoped<IArtworkService, ArtworkService>();
+            builder.Services.AddScoped<IGameService, GameService>();
+            builder.Services.AddScoped<IGameCommentService, GameCommentService>();
 
             builder.Services.AddControllersWithViews(options =>
             {

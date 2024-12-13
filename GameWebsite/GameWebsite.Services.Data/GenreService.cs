@@ -37,17 +37,7 @@ namespace GameWebsite.Services.Data
             return genreViewModels;
         }
 
-        public async Task AddAsync(AddGenreViewModel model)
-        {
-            Genre genre = new Genre()
-            {
-                GenreName = model.GenreName
-            };
-
-            this.genreRepository.AddAsync(genre);
-        }
-
-        public async Task<AddGenreViewModel> GetByIdAttachedAsync(int id)
+        public async Task<AddGenreViewModel> GetByIdForEditAsync(int id)
         {
             var model = await genreRepository
                 .GetAllAttached()
@@ -68,6 +58,16 @@ namespace GameWebsite.Services.Data
                 .GetByIDAsync(id);
 
             return model;
+        }
+        
+        public async Task AddAsync(AddGenreViewModel model)
+        {
+            Genre genre = new Genre()
+            {
+                GenreName = model.GenreName
+            };
+
+            await this.genreRepository.AddAsync(genre);
         }
 
         public async Task UpdateAsync(Genre entity, AddGenreViewModel model)

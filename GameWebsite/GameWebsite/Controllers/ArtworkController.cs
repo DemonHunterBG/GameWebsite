@@ -13,12 +13,10 @@ namespace GameWebsite.Web.Controllers
 {
     public class ArtworkController : Controller
     {
-        private readonly ApplicationDbContext context;
         private readonly IArtworkService artworkService;
 
-        public ArtworkController(ApplicationDbContext context, IArtworkService artworkService)
+        public ArtworkController(IArtworkService artworkService)
         {
-            this.context = context;
             this.artworkService = artworkService;
         }
 
