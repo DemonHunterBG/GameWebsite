@@ -1,5 +1,7 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
+using GameWebsite.Services.Data;
+using GameWebsite.Services.Data.Interfaces;
 using GameWebsite.Web.ViewModels.Artwork;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,20 +14,20 @@ namespace GameWebsite.Web.Controllers
     public class ArtworkController : Controller
     {
         private readonly ApplicationDbContext context;
+        private readonly IArtworkService artworkService;
 
-        public ArtworkController(ApplicationDbContext context)
+        public ArtworkController(ApplicationDbContext context, IArtworkService artworkService)
         {
             this.context = context;
+            this.artworkService = artworkService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 12)
         {
-            var artworks = await context.Artworks
-                .AsNoTracking()
-                .ToListAsync();
+            var artworks = await artworkService.GetAllAsync();
 
-            int totalArtworks = artworks.Count;
+            int totalArtworks = artworks.Count();
             int totalPages = (int)Math.Ceiling(totalArtworks / (double)pageSize);
 
             artworks = artworks
@@ -53,13 +55,11 @@ namespace GameWebsite.Web.Controllers
         [HttpPost]
         private async Task DeleteArtwork(int id)
         {
-            Artwork? entity = await context.Artworks.FindAsync(id);
+            Artwork? entity = await artworkService.GetByIdAsync(id);
 
             if (entity != null)
             {
-                context.Artworks.Remove(entity);
-
-                await context.SaveChangesAsync();
+                await artworkService.DeleteAsync(id);
             }
         }
 
@@ -79,14 +79,7 @@ namespace GameWebsite.Web.Controllers
                 return View(model);
             }
 
-            Artwork artwork = new Artwork()
-            {
-                Title = model.Title,
-                ArtworkURL = model.ArtworkURL,
-            };
-
-            await context.Artworks.AddAsync(artwork);
-            await context.SaveChangesAsync();
+            await artworkService.AddAsync(model);
 
             return RedirectToAction(nameof(Index));
         }
