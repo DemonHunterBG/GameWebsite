@@ -30,18 +30,8 @@ namespace GameWebsite.Web
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            //builder.Services.AddScoped<IRepository<ApplicationUserGame, object>, BaseRepository<ApplicationUserGame, object>>();
-            //builder.Services.AddScoped<IRepository<Game, int>, BaseRepository<Game, int>>();
-            //builder.Services.AddScoped<IRepository<GameComment, int>, BaseRepository<GameComment, int>>();
-            //builder.Services.AddScoped<IRepository<GameGenre, object>, BaseRepository<GameGenre, object>>();
-            //builder.Services.AddScoped<IRepository<Genre, int>, BaseRepository<Genre, int>>();
-            //builder.Services.AddScoped<IRepository<Artwork, int>, BaseRepository<Artwork, int>>();
             builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
-
-            builder.Services.AddScoped<IGenreService, GenreService>();
-            builder.Services.AddScoped<IArtworkService, ArtworkService>();
-            builder.Services.AddScoped<IGameService, GameService>();
-            builder.Services.AddScoped<IGameCommentService, GameCommentService>();
+            builder.Services.RegisterUserDefinedServices(typeof(IGameService).Assembly);
 
             builder.Services.AddControllersWithViews(options =>
             {

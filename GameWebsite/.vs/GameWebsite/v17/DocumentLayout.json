@@ -3,48 +3,12 @@
   "WorkspaceRootPath": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBEA5865-49A5-47BC-BE10-57AC0BF49EA2}|GameWebsite.Services.Data\\GameWebsite.Services.Data.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite.services.data\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBEA5865-49A5-47BC-BE10-57AC0BF49EA2}|GameWebsite.Services.Data\\GameWebsite.Services.Data.csproj|solutionrelative:gamewebsite.services.data\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBEA5865-49A5-47BC-BE10-57AC0BF49EA2}|GameWebsite.Services.Data\\GameWebsite.Services.Data.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite.services.data\\gamecommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBEA5865-49A5-47BC-BE10-57AC0BF49EA2}|GameWebsite.Services.Data\\GameWebsite.Services.Data.csproj|solutionrelative:gamewebsite.services.data\\gamecommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBEA5865-49A5-47BC-BE10-57AC0BF49EA2}|GameWebsite.Services.Data\\GameWebsite.Services.Data.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite.services.data\\interfaces\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBEA5865-49A5-47BC-BE10-57AC0BF49EA2}|GameWebsite.Services.Data\\GameWebsite.Services.Data.csproj|solutionrelative:gamewebsite.services.data\\interfaces\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBEA5865-49A5-47BC-BE10-57AC0BF49EA2}|GameWebsite.Services.Data\\GameWebsite.Services.Data.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite.services.data\\interfaces\\igamecommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBEA5865-49A5-47BC-BE10-57AC0BF49EA2}|GameWebsite.Services.Data\\GameWebsite.Services.Data.csproj|solutionrelative:gamewebsite.services.data\\interfaces\\igamecommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC76F0B0-B177-4A1F-837B-227D7512DDD3}|GameWebsite.Data\\GameWebsite.Data.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite.data\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC76F0B0-B177-4A1F-837B-227D7512DDD3}|GameWebsite.Data\\GameWebsite.Data.csproj|solutionrelative:gamewebsite.data\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\areas\\admin\\controllers\\gamemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\areas\\admin\\controllers\\gamemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B583EA75-4626-4233-BD8D-3014AB8F9FE7}|GameWebsite.Infrastrucutre\\GameWebsite.Web.Infrastructure.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite.infrastrucutre\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B583EA75-4626-4233-BD8D-3014AB8F9FE7}|GameWebsite.Infrastrucutre\\GameWebsite.Web.Infrastructure.csproj|solutionrelative:gamewebsite.infrastrucutre\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite\\areas\\admin\\controllers\\genremanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A03A43C-E865-42ED-B016-2B6A3DECCC03}|GameWebsite\\GameWebsite.Web.csproj|solutionrelative:gamewebsite\\areas\\admin\\controllers\\genremanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC76F0B0-B177-4A1F-837B-227D7512DDD3}|GameWebsite.Data\\GameWebsite.Data.csproj|d:\\my softuni exercises\\asp.net advanced\\project\\gamewebsite\\gamewebsite\\gamewebsite.data\\repository\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC76F0B0-B177-4A1F-837B-227D7512DDD3}|GameWebsite.Data\\GameWebsite.Data.csproj|solutionrelative:gamewebsite.data\\repository\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Program.cs",
               "RelativeDocumentMoniker": "GameWebsite\\Program.cs",
               "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Program.cs",
               "RelativeToolTip": "GameWebsite\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T16:37:42.92Z",
               "IsPinned": true,
@@ -73,131 +37,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GameCommentService.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Services.Data\\GameCommentService.cs",
-              "RelativeDocumentMoniker": "GameWebsite.Services.Data\\GameCommentService.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Services.Data\\GameCommentService.cs",
-              "RelativeToolTip": "GameWebsite.Services.Data\\GameCommentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T23:16:00.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IGameCommentService.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Services.Data\\Interfaces\\IGameCommentService.cs",
-              "RelativeDocumentMoniker": "GameWebsite.Services.Data\\Interfaces\\IGameCommentService.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Services.Data\\Interfaces\\IGameCommentService.cs",
-              "RelativeToolTip": "GameWebsite.Services.Data\\Interfaces\\IGameCommentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T23:15:30.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "GameWebsite\\Controllers\\GameController.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Controllers\\GameController.cs",
-              "RelativeToolTip": "GameWebsite\\Controllers\\GameController.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAmwIwAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T22:16:12.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GameManagementController.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Controllers\\GameManagementController.cs",
-              "RelativeDocumentMoniker": "GameWebsite\\Areas\\Admin\\Controllers\\GameManagementController.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Controllers\\GameManagementController.cs",
-              "RelativeToolTip": "GameWebsite\\Areas\\Admin\\Controllers\\GameManagementController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAAFgAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:41:59.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameService.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Services.Data\\GameService.cs",
-              "RelativeDocumentMoniker": "GameWebsite.Services.Data\\GameService.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Services.Data\\GameService.cs",
-              "RelativeToolTip": "GameWebsite.Services.Data\\GameService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:16:26.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IGameService.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Services.Data\\Interfaces\\IGameService.cs",
-              "RelativeDocumentMoniker": "GameWebsite.Services.Data\\Interfaces\\IGameService.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Services.Data\\Interfaces\\IGameService.cs",
-              "RelativeToolTip": "GameWebsite.Services.Data\\Interfaces\\IGameService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:16:11.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "ServiceCollectionExtensions.cs",
               "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Infrastrucutre\\Extensions\\ServiceCollectionExtensions.cs",
               "RelativeDocumentMoniker": "GameWebsite.Infrastrucutre\\Extensions\\ServiceCollectionExtensions.cs",
               "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Infrastrucutre\\Extensions\\ServiceCollectionExtensions.cs",
               "RelativeToolTip": "GameWebsite.Infrastrucutre\\Extensions\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAqwEgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:50:35.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GenreManagementController.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Controllers\\GenreManagementController.cs",
-              "RelativeDocumentMoniker": "GameWebsite\\Areas\\Admin\\Controllers\\GenreManagementController.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite\\Areas\\Admin\\Controllers\\GenreManagementController.cs",
-              "RelativeToolTip": "GameWebsite\\Areas\\Admin\\Controllers\\GenreManagementController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAFEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T15:50:02.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Data\\Repository\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "GameWebsite.Data\\Repository\\BaseRepository.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Data\\Repository\\BaseRepository.cs",
-              "RelativeToolTip": "GameWebsite.Data\\Repository\\BaseRepository.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAA1wE0AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:12:14.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Data\\Repository\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "GameWebsite.Data\\Repository\\Interfaces\\IRepository.cs",
-              "ToolTip": "D:\\My Softuni Exercises\\ASP.NET Advanced\\Project\\GameWebsite\\GameWebsite\\GameWebsite.Data\\Repository\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "GameWebsite.Data\\Repository\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:06:07.669Z",
+              "WhenOpened": "2024-12-13T23:49:43.929Z",
               "EditorCaption": ""
             }
           ]
