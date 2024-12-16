@@ -13,15 +13,13 @@ namespace GameWebsite.Services.Data.Interfaces
     {
         Task<bool> CheckIfGameExists(int id);
 
-        Task<IEnumerable<GameListViewModel>> GetAllWithQueryAsync(string currentUserId, string? searchQuery = null, string? genre = null);
+        Task<IEnumerable<GameListViewModel>> GetAllWithQueryAsync(string? currentUserId = null, string? searchQuery = null, string? genre = null);
 
         Task<IEnumerable<GameListViewModel>> GetAllFavoritesAsync(string currentUserId);
 
         Task<IEnumerable<GameManagementViewModel>> GetAllManagementAsync();
 
         Task<Game> GetByIdAsync(int id);
-
-        Task<Game> GetByIdFavoritesAsync(int id);
 
         Task<GameViewModel> GetGameForPageByIdAsync(int id, string currentUserId);
 

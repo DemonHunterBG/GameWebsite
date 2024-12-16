@@ -12,14 +12,11 @@ namespace GameWebsite.Services.Data
 {
     public class GameCommentService : IGameCommentService
     {
-        private readonly IRepository<Game, int> gameRepository;
         private readonly IRepository<GameComment, int> gameCommentsRepository;
 
         public GameCommentService(
-            IRepository<Game, int> gameRepository,
             IRepository<GameComment, int> gameCommentsRepository)
         {
-            this.gameRepository = gameRepository;
             this.gameCommentsRepository = gameCommentsRepository;
         }
 

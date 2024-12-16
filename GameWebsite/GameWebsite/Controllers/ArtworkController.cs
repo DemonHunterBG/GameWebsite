@@ -25,6 +25,8 @@ namespace GameWebsite.Web.Controllers
         {
             var artworks = await artworkService.GetAllAsync();
 
+            artworks = artworks.OrderByDescending(a => a.Id).ToList();
+
             int totalArtworks = artworks.Count();
             int totalPages = (int)Math.Ceiling(totalArtworks / (double)pageSize);
 

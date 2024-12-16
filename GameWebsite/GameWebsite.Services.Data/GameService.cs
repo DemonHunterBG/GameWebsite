@@ -44,7 +44,7 @@ namespace GameWebsite.Services.Data
             return exists;
         }
 
-        public async Task<IEnumerable<GameListViewModel>> GetAllWithQueryAsync(string currentUserId, string? searchQuery = null, string? genre = null)
+        public async Task<IEnumerable<GameListViewModel>> GetAllWithQueryAsync(string? currentUserId = null, string? searchQuery = null, string? genre = null)
         {
             var games = await gameRepository
                 .GetAllAttached()
@@ -118,17 +118,6 @@ namespace GameWebsite.Services.Data
         {
             var model = await gameRepository
                 .GetByIDAsync(id);
-
-            return model;
-        }
-
-        public async Task<Game> GetByIdFavoritesAsync(int id)
-        {
-            var model = await gameRepository
-                .GetAllAttached()
-                .Where(g => g.Id == id)
-                .Include(g => g.Favorites)
-                .FirstOrDefaultAsync();
 
             return model;
         }

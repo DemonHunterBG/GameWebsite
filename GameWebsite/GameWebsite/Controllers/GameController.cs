@@ -64,9 +64,7 @@ namespace GameWebsite.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToFavorites(int gameId)
         {
-            Game? entity = await gameService.GetByIdFavoritesAsync(gameId);
-
-            if (entity == null)
+            if (!await gameService.CheckIfGameExists(gameId))
             {
                 return RedirectToAction(nameof(Index));
             }
@@ -82,9 +80,7 @@ namespace GameWebsite.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> RemoveFromFavorites(int gameId)
         {
-            Game? entity = await gameService.GetByIdFavoritesAsync(gameId);
-
-            if (entity == null)
+            if (!await gameService.CheckIfGameExists(gameId))
             {
                 return RedirectToAction(nameof(Favorites));
             }
