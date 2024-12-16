@@ -1,5 +1,6 @@
 ﻿using GameWebsite.Data;
 using GameWebsite.Data.Models;
+using GameWebsite.Services.Data.Interfaces;
 using GameWebsite.Web.ViewModels.AdminViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -12,35 +13,17 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class UserManagementController : Controller
     {
-        private readonly ApplicationDbContext context;
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly RoleManager<IdentityRole> roleManager;
+        private readonly IUserService userService;
 
-        public UserManagementController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public UserManagementController(IUserService userService)
         {
-            this.context = context;
-            this.userManager = userManager;
-            this.roleManager = roleManager;
+            this.userService = userService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var users = userManager.Users.ToList();
-            var userViewModels = new List<UserViewModel>();
-
-            foreach (var user in users)
-            {
-                int commments = user.GameComments.Count;
-                var roles = await userManager.GetRolesAsync(user);
-                userViewModels.Add(new UserViewModel
-                {
-                    Id = user.Id,
-                    UserName = user.UserName,
-                    Email = user.Email,
-                    Roles = roles.ToList(),
-                });
-            }
+            var userViewModels = await userService.GetAllAsync();
 
             return View(userViewModels);
         }
@@ -48,12 +31,7 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AssignRole(string userId, string role)
         {
-            var user = await userManager.FindByIdAsync(userId);
-
-            if (user != null && await roleManager.RoleExistsAsync(role))
-            {
-                await userManager.AddToRoleAsync(user, role);
-            }
+            await userService.AssignRoleAsync(userId, role);
 
             return RedirectToAction("Index");
         }
@@ -61,12 +39,7 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> RemoveRole(string userId, string role)
         {
-            var user = await userManager.FindByIdAsync(userId);
-
-            if (user != null && await roleManager.RoleExistsAsync(role))
-            {
-                await userManager.RemoveFromRoleAsync(user, role);
-            }
+            await userService.RemoveRoleAsync(userId, role);
 
             return RedirectToAction("Index");
         }
@@ -74,17 +47,7 @@ namespace GameWebsite.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteUser(string userId)
         {
-            var user = await userManager.FindByIdAsync(userId);
-
-            if (user != null)
-            {
-                List<ApplicationUserGame> applicationUserGames = await context.ApplicationUsersGames
-                    .Where(aug => aug.UserId == userId)
-                    .ToListAsync();
-
-                context.ApplicationUsersGames.RemoveRange(applicationUserGames);
-                await userManager.DeleteAsync(user);
-            }
+            await userService.DeleteUserAsync(userId);
 
             return RedirectToAction("Index");
         }
